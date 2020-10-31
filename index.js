@@ -330,6 +330,30 @@ app.get('/sonytv', (req, res)=>{
     res.sendFile('public/html/sonytv.html', { root: __dirname });
 })
 
+app.post('/compareitem',urlencoded,(req,res)=>{
+    var user1 = req.query.id;
+    console.log(user1);
+    let globArr = [];
+    let answ = user1.split(',');
+    // console.log(answ);
+    // console.log(answ[1]);
+    var compids = [];
+    compids.push(answ[1]);
+    compids.push(answ[2]);
+    var newarr=[];
+    db.collection('products').find({}).toArray(function(err, prod) {
+        if (err) throw err;
+        prod.forEach(element => {
+            if(compids.includes(element.itemid)){
+                newarr.push(element);
+            }
+            
+        });
+        console.log(newarr);
+        res.render('compare',{data:newarr});
+    });
+})
+
 app.get('/cat', (req, res)=>{
     data=db.collection("products").find();
     db.collection("products").find({}).toArray(function(err, doc) {
