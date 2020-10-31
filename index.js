@@ -330,6 +330,10 @@ app.get('/sonytv', (req, res)=>{
     res.sendFile('public/html/sonytv.html', { root: __dirname });
 })
 
+app.get("/arview",(req,res) =>{
+    res.sendFile('public/html/arview.html', { root: __dirname });
+})
+
 app.post('/compareitem',urlencoded,(req,res)=>{
     var user1 = req.query.id;
     console.log(user1);
