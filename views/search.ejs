@@ -102,35 +102,36 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Search for products and brands" id="search" style="width: 40vw;" name="search">
         <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
       </form>
-    </div>
+      
     <a href="vrmode" target="_blank" class="nav-link" style="color: white;" aria-expanded="false">
       
-    <span style="font-size: 20px;margin-right: 2vw;"><i class="fas fa-vr-cardboard"></i> See in VR</span>
+      <span style="font-size: 20px;margin-right: 2vw;"><i class="fas fa-vr-cardboard"></i> See in VR</span>
+          </a>
+      
+    <ul class="navbar-nav ">
+      <!-- PROFILE DROPDOWN - scrolling off the page to the right -->
+      <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" style="color: white;" id="navDropDownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span id="username" style="font-size: 20px;"></span>
         </a>
-    
-  <ul class="navbar-nav ">
-    <!-- PROFILE DROPDOWN - scrolling off the page to the right -->
-    <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" style="color: white;" id="navDropDownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span id="username" style="font-size: 20px;"></span>
-      </a>
-        <div class="dropdown-menu" aria-labelledby="navDropDownLink">
-            <a class="dropdown-item" href="#">Profile</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" onClick="(function(){
-              location.href = 'login';
-              localStorage.userid = null;
-              localStorage.username = null;
-              return false;
-          })();return false;" style="cursor: pointer;">Logout</a>
-        </div>
-    </li>
-</ul>
-    <form action="#" class="font-size-14 font-rale" style="margin-right:2vw;margin-left: 2vw;">
-      <a id="cart" onclick="changelink()" class="py-2 rounded-pill color-primary-bg">
-        <span class="font-size-16 px-2 text-white" style="cursor: pointer;font-size: 17px;"><i class="fas fa-shopping-cart"></i> Cart</span>
-      </a>
-  </form>
+          <div class="dropdown-menu" aria-labelledby="navDropDownLink">
+              <a class="dropdown-item" href="#">Profile</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" onClick="(function(){
+                location.href = 'login';
+                localStorage.userid = null;
+                localStorage.username = null;
+                return false;
+            })();return false;" style="cursor: pointer;">Logout</a>
+          </div>
+      </li>
+  </ul>
+      <form action="#" class="font-size-14 font-rale" style="margin-right:2vw;margin-left: 2vw;">
+        <a id="cart" onclick="changelink()" class="py-2 rounded-pill color-primary-bg">
+          <span class="font-size-16 px-2 text-white" style="cursor: pointer;font-size: 17px;"><i class="fas fa-shopping-cart"></i> Cart</span>
+        </a>
+    </form>
+    </div>
   </nav>
   <!-- <form method="POST" action="/sort" id="myForm">
     <div class="form-group">
