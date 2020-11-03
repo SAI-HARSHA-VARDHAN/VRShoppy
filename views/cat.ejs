@@ -104,7 +104,6 @@
         <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
       </form>
       <a href="vrmode" target="_blank" class="nav-link" style="color: white;" aria-expanded="false">
-      
         <span style="font-size: 20px;margin-right: 2vw;"><i class="fas fa-vr-cardboard"></i> See in VR</span>
             </a>
         
@@ -164,7 +163,7 @@
           <h5 class="card-title" style="margin-top:10px;"><b><%= doc.title %></b></h5>
           <div class="popup"  onclick="myFunction('${i}')">₹<%= doc.amount%>
     </div>
-    <a href="/checkout?id=<%= doc.itemid%>"  target="_b   lank" class="btn btn-primary" style="background-color:#BF529B;border:0px;padding:10px;padding-left:25px;padding-right:25px;border-radius:50px;margin-right:0px;margin-top: 10px;" id="targetIcon-${i}">Checkout</a>
+    <a href="/checkout?id=<%= doc.itemid%>"  target="_blank" class="btn btn-primary" style="background-color:#BF529B;border:0px;padding:10px;padding-left:25px;padding-right:25px;border-radius:50px;margin-right:0px;margin-top: 10px;" id="targetIcon-${i}">Checkout</a>
   </div></div>
     <%}})%>
   </div>
